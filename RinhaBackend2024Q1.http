@@ -1,0 +1,56 @@
+@RinhaBackend2024Q1_HostAddress = http://localhost:9999
+@ClientId = 1
+
+GET {{RinhaBackend2024Q1_HostAddress}}/
+
+###
+
+POST {{RinhaBackend2024Q1_HostAddress}}/clientes/99/transacoes
+Content-Type: application/json
+
+{
+  "valor": 1,
+  "tipo": "d",
+  "descricao": "Retirada"
+}
+
+###
+
+POST {{RinhaBackend2024Q1_HostAddress}}/clientes/{{ClientId}}/transacoes
+Content-Type: application/json
+
+{
+  "valor": 100001,
+  "tipo": "d",
+  "descricao": "Retirada"
+}
+
+###
+
+POST {{RinhaBackend2024Q1_HostAddress}}/clientes/{{ClientId}}/transacoes
+Content-Type: application/json
+
+{
+  "valor": 100,
+  "tipo": "d",
+  "descricao": "Retirada"
+}
+
+###
+
+POST {{RinhaBackend2024Q1_HostAddress}}/clientes/{{ClientId}}/transacoes
+Content-Type: application/json
+
+{
+  "valor": 100,
+  "tipo": "c",
+  "descricao": "Depósito"
+}
+
+###
+
+GET {{RinhaBackend2024Q1_HostAddress}}/clientes/{{ClientId}}/extrato
+
+###
+
+GET {{RinhaBackend2024Q1_HostAddress}}/clientes/99/extrato

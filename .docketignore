@@ -1,0 +1,12 @@
+.idea
+.bin
+.obj
+Properties
+appsettings.json
+appsettings.*.json
+load-test
+executar-teste-local.sh
+INSTRUCOES.md
+README.md
+RinhaBackend2024Q1.http
+resources
